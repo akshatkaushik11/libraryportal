@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#borderimg { 
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.png) 30 round;
+}
+div {
+    border: 2px groove;
+    margin-left: 230px;
+    margin-right: 280px;
+    padding: 1px;
+    background-color: lightgrey;
+    background-clip: content-box;
+}
+.button {
+    background-color: white; /* Green */
+    border: 2px groove green;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 1px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover{
+	background-color: green;
+	color: white;
+
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+</style>
+</head>
+<body style="background-color: green">
+	<p align="center" style="font-family:'Utopia';font-size: 20px;color: white;"><i><strong>Register and have access to over 1000 different books!</strong></i></p>	
+		<form action="/register/" method="post">
+<pre style="font-family:verdana" align="center">
+        <div><ul>       <style="color: red"><i><ins>{{msg}}</ins></i></style>
+
+ Full Name:  <input type="text" style="font-family: verdana;" name="name" required="true">
+
+     D.O.B:     <input type="date" style="font-family: verdana;" name="dob" required="true">
+
+    Gender:    <select><option value="gender">Male</option>
+                    <option value="gender">Female</option></select>
+
+   Roll No:    <input type="text" style="font-family: verdana;" name="rollno" required="true">
+
+Department:    <select><option value="dept">EnTC</option>
+                    <option value="dept">IT</option>
+                    <option value="dept">CS</option></select>
+
+  Username: <input type="text"style="font-family: verdana;"  name="username" required="true">
+ 
+   Password: <input type="password" name="password" required="true">
+
+Re-Enter Pass: <input type="password" name="passwordcheck" required="true">
+
+     Contact: <input type="text"style="font-family: verdana;"  name="contact">
+
+  UserType: <input type="radio" name="user_type" value="librarian" required="true">Librarian
+                   <input type="radio" name="user_type" value="student">Student
+
+                                         <input type="Submit" style="font-family: verdana;"  class="button" value="Register">
+
+</pre>
+
+</form>
+</div>
+<img src="/home/akshat/django/proj1/app/templates/border.png">
+</body>
+</html>

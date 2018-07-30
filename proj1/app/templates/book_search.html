@@ -1,0 +1,40 @@
+<html>
+<title>
+BOOK SEARCH
+</title>
+<br>
+<body>
+<table style="width:100%" Border="1">
+<tr>
+<th>No.</th>
+<th>Name</th>
+<th>Author</th>
+<th>Rating</th>
+<th>Summary</th>
+</tr>
+
+{% for i in list %}
+
+<tr>
+<td>
+{{forloop.counter}}
+</td>
+<td>
+{{i.name}}
+</td>
+<td>
+{{i.author}}
+</td>
+<td>
+{{i.rating}}
+</td>
+<td>
+{{i.summary}}
+</td>
+</tr>
+{%endfor%}
+</table>
+<br>
+<a href="/student"><button>Go Back</button></a>
+</body>
+</html>
